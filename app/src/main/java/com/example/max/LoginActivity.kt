@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalMaterial3Api::class)
+
 package com.example.max
 
 import android.os.Bundle
@@ -9,10 +11,13 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.shape.CutCornerShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Lock
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -30,7 +35,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
@@ -38,6 +45,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.max.ui.theme.MaxTheme
 import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
+import java.net.PasswordAuthentication
+import java.security.KeyStore.PasswordProtection
 
 class LoginActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,7 +57,8 @@ class LoginActivity : ComponentActivity() {
         }
     }
 }
-@OptIn(ExperimentalMaterial3Api::class)
+
+
 @Preview(showBackground = true)
 @Composable
 fun LoginScreen(){
@@ -62,6 +72,7 @@ fun LoginScreen(){
         modifier = Modifier
             .fillMaxSize()
             .background(Color.Yellow)
+
 
 
 
@@ -79,8 +90,11 @@ fun LoginScreen(){
             value = usernamee,
             label = { Text( "usernamee")},
 
-            leadingIcon = { Icon(imageVector = Icons.Default.Email,
+            leadingIcon = { Icon(imageVector = Icons.Default.Person,
                 contentDescription = "emailIcon") },
+
+//            trailingIcon = { Icon(imageVector = Icons.Default.Email,
+//            contentDescription = null) },
 
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
             onValueChange = {
@@ -92,7 +106,8 @@ fun LoginScreen(){
 
         OutlinedTextField(
             value = password,
-            label = {Text( "password")},
+
+          label = {Text( "password")},
 
             leadingIcon = { Icon(imageVector = Icons.Default.Lock,
                 contentDescription = "emailIcon") },
@@ -107,6 +122,9 @@ fun LoginScreen(){
         
         Button(
             onClick = { /*TODO*/ },
+//            shape = RectangleShape,
+//            shape = RoundedCornerShape(10.dp),
+            shape = CutCornerShape(10),
   //          colors = ButtonDefaults.buttonColors(Color.Blue)
         )
         {
