@@ -49,7 +49,7 @@ fun Mit() {
         verticalArrangement = Arrangement.Center
     ) {
 
-        Text("Home Screen", color = Color.Blue, fontSize = 40.sp)
+        Text("Home Screen", color = Color.Cyan, fontSize = 40.sp)
 
         Text("My App", color = Color.Cyan, fontSize = 40.sp)
 
@@ -76,12 +76,46 @@ fun Mit() {
         }
 
 
+        val card = LocalContext.current
+        Button(onClick = {
+            card.startActivity(Intent(card, CardActivity::class.java))
+
+        }) {
+
+            Text("Card")
+
+
+        }
+
+        val scroll = LocalContext.current
+        Button(onClick = {
+            scroll.startActivity(Intent(scroll, ScrollActivity::class.java))
+
+        }) {
+
+            Text("Scroll")
+
+
+        }
+
+        val Column = LocalContext.current
+        Button(onClick = {
+            Column.startActivity(Intent(Column, ColumnRowActivity::class.java))
+
+        }) {
+
+            Text("C&R")
+
+
+        }
     }
-}
+    }
+
 @Preview
 @Composable
-fun GreetingPreview(){
-    Mit()
+fun GreetingPreview() {
+Mit()
 }
+
 
 
