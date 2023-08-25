@@ -108,8 +108,16 @@ fun Mit() {
 
 
         }
+        val Apple = LocalContext.current
+        Button(onClick = {
+            Apple.startActivity(Intent(Apple, ClassActivity::class.java))
+
+        }) {
+
+            Text("Apple")
+        }
     }
-    }
+}
 
 @Preview
 @Composable
