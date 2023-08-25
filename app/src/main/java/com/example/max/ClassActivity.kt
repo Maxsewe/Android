@@ -64,7 +64,7 @@ fun Max() {
             Column() {
 
                 Text(
-                    text = "Category",
+                    "Category",
                     fontSize = (30.sp),
                     color = Color.White
                 )
@@ -81,7 +81,7 @@ fun Max() {
                         ) {
 
                             Text(
-                                text = "Fruits",
+                                 "Fruits",
                                 fontSize = 25.sp,
                                 color = Color.Black
                             )
@@ -105,7 +105,7 @@ fun Max() {
                         ) {
 
                             Text(
-                                text = "Vegetables",
+                                 "Vegetables",
                                 fontSize = 25.sp,
                                 color = Color.Black
                             )
@@ -129,7 +129,7 @@ fun Max() {
                         ) {
 
                             Text(
-                                text = "Spices",
+                                 "Spices",
                                 fontSize = 25.sp,
                                 color = Color.Black
                             )
@@ -152,7 +152,7 @@ fun Max() {
 
                 Spacer(modifier = Modifier.height(40.dp))
 
-                Text(text = "Popular",
+                Text( "Popular",
                     fontSize = 30.sp,
                     color = Color.White)
 
@@ -168,7 +168,7 @@ fun Max() {
                     colors = CardDefaults.cardColors(Color.Gray)
 
                     ){
-                    Text(text = "Pomegranate",
+                    Text( "Pomegranate",
                         fontSize = 30.sp,
                         color = Color.Black)
 
@@ -186,7 +186,7 @@ fun Max() {
                 Spacer(modifier = Modifier.height(40.dp))
 
                 Text(
-                    text = "Top Item",
+                     "Top Item",
                     fontSize = 30.sp,
                     color = Color.White
 
@@ -213,7 +213,7 @@ fun Max() {
                             )
 
                             Text(
-                                text = "Fresh Orange",
+                                 "Fresh Orange",
                                 fontSize = 30.sp,
                                 color = Color.Black
                             )
@@ -238,7 +238,7 @@ fun Max() {
                             )
 
                             Text(
-                                text = "Strawberry",
+                                 "Strawberry",
                                 fontSize = 30.sp,
                                 color = Color.Black
                             )
@@ -262,7 +262,7 @@ fun Max() {
                             )
 
                             Text(
-                                text = "Fresh Orange",
+                                 "Fresh Orange",
                                 fontSize = 30.sp,
                                 color = Color.Black
                             )
@@ -287,7 +287,7 @@ fun Max() {
                             )
 
                             Text(
-                                text = "Strawberry",
+                                 "Strawberry",
                                 fontSize = 30.sp,
                                 color = Color.Black
                             )
